@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://ricambi/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ricambi/">
+
+<xs:element name="aggiungiRicambio" type="tns:aggiungiRicambio"/>
+
+<xs:element name="aggiungiRicambioResponse" type="tns:aggiungiRicambioResponse"/>
+
+<xs:element name="cercaPerId" type="tns:cercaPerId"/>
+
+<xs:element name="cercaPerIdResponse" type="tns:cercaPerIdResponse"/>
+
+<xs:element name="eliminaRicambio" type="tns:eliminaRicambio"/>
+
+<xs:element name="eliminaRicambioResponse" type="tns:eliminaRicambioResponse"/>
+
+<xs:element name="getRicambi" type="tns:getRicambi"/>
+
+<xs:element name="getRicambiPerCategoria" type="tns:getRicambiPerCategoria"/>
+
+<xs:element name="getRicambiPerCategoriaResponse" type="tns:getRicambiPerCategoriaResponse"/>
+
+<xs:element name="getRicambiPocoDisponibili" type="tns:getRicambiPocoDisponibili"/>
+
+<xs:element name="getRicambiPocoDisponibiliResponse" type="tns:getRicambiPocoDisponibiliResponse"/>
+
+<xs:element name="getRicambiResponse" type="tns:getRicambiResponse"/>
+
+<xs:element name="modificaRicambio" type="tns:modificaRicambio"/>
+
+<xs:element name="modificaRicambioResponse" type="tns:modificaRicambioResponse"/>
+
+<xs:complexType name="aggiungiRicambio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ricambio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ricambio">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="disponibilita" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="pezziVenduti" type="xs:int"/>
+<xs:element name="prezzo" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiRicambioResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaRicambio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ricambio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaRicambioResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ricambio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRicambi">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRicambiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ricambio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaRicambio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ricambio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaRicambioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ricambio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRicambiPerCategoria">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRicambiPerCategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ricambio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRicambiPocoDisponibili">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRicambiPocoDisponibiliResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ricambio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
