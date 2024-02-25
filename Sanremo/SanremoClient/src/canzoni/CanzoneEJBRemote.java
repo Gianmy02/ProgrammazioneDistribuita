@@ -16,6 +16,6 @@ public interface CanzoneEJBRemote {
     public List<Canzone> getCanzoni();
     
     public Canzone cercaPerId(int id);
-    public List<Canzone> printByVotes(float voto);
+    public List<Canzone> printByVotes(Float voto);
     public List<Canzone> printByCategory(String categoria);
 }

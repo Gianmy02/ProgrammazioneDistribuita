@@ -48,7 +48,7 @@ public class CanzoneEJB implements CanzoneEJBRemote {
 
     @Override
     @CheckParameters
-    public List<Canzone> printByVotes(float voto) {
+    public List<Canzone> printByVotes(Float voto) {
         TypedQuery<Canzone> query = em.createNamedQuery(Canzone.printByVotes, Canzone.class);
         query.setParameter(1, voto);
         return query.getResultList();

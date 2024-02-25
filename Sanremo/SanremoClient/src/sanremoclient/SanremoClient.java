@@ -28,15 +28,16 @@ public class SanremoClient {
         for(Canzone c: canzoni)
             System.out.println(c);
         
-        System.out.println("Inserisci categoria: ");
+        System.out.print("Inserisci categoria: ");
         String categoria = scanner.nextLine();
         canzoni = ejb.printByCategory(categoria);
         for(Canzone c: canzoni)
             System.out.println(c);
         
-        System.out.println("Inserisci voto: ");
-        Float voto = scanner.nextFloat();
-        canzoni = ejb.printByVotes(voto);
+        System.out.print("Inserisci voto: ");
+        String voto = scanner.nextLine();
+        float v = Float.parseFloat(voto);
+        canzoni = ejb.printByVotes(v);
         for(Canzone c: canzoni)
             System.out.println(c);
         
