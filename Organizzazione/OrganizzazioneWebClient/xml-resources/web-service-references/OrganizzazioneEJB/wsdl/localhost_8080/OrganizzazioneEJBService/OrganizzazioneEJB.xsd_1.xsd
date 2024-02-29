@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://organizzazione/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://organizzazione/">
+
+<xs:element name="aggiungiOrganizzazione" type="tns:aggiungiOrganizzazione"/>
+
+<xs:element name="aggiungiOrganizzazioneResponse" type="tns:aggiungiOrganizzazioneResponse"/>
+
+<xs:element name="eliminaOrganizzazione" type="tns:eliminaOrganizzazione"/>
+
+<xs:element name="eliminaOrganizzazioneResponse" type="tns:eliminaOrganizzazioneResponse"/>
+
+<xs:element name="getOrganizzazione" type="tns:getOrganizzazione"/>
+
+<xs:element name="getOrganizzazioneResponse" type="tns:getOrganizzazioneResponse"/>
+
+<xs:element name="getTrasparenzaCento" type="tns:getTrasparenzaCento"/>
+
+<xs:element name="getTrasparenzaCentoResponse" type="tns:getTrasparenzaCentoResponse"/>
+
+<xs:element name="modificaOrganizzazione" type="tns:modificaOrganizzazione"/>
+
+<xs:element name="modificaOrganizzazioneResponse" type="tns:modificaOrganizzazioneResponse"/>
+
+<xs:element name="numeroProgettiMaggiore" type="tns:numeroProgettiMaggiore"/>
+
+<xs:element name="numeroProgettiMaggioreResponse" type="tns:numeroProgettiMaggioreResponse"/>
+
+<xs:element name="stampaBilancioMaggiore" type="tns:stampaBilancioMaggiore"/>
+
+<xs:element name="stampaBilancioMaggioreResponse" type="tns:stampaBilancioMaggioreResponse"/>
+
+<xs:element name="trovaPerId" type="tns:trovaPerId"/>
+
+<xs:element name="trovaPerIdResponse" type="tns:trovaPerIdResponse"/>
+
+<xs:complexType name="stampaBilancioMaggiore">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="stampaBilancioMaggioreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="organizzazione">
+<xs:sequence>
+<xs:element name="bilancio" type="xs:float"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="numDonatori" type="xs:int"/>
+<xs:element name="numPaesi" type="xs:int"/>
+<xs:element name="numProgetti" type="xs:int"/>
+<xs:element name="sede" type="xs:string" minOccurs="0"/>
+<xs:element name="trasparenza" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazione" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaOrganizzazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTrasparenzaCento">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTrasparenzaCentoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazione" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaOrganizzazioneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazione" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiOrganizzazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOrganizzazione">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOrganizzazioneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="numeroProgettiMaggiore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="numeroProgettiMaggioreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazione" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
