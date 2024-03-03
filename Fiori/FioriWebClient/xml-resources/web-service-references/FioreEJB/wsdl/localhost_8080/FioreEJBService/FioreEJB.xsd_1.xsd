@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://fiori/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://fiori/">
+
+<xs:element name="aggiungiFiore" type="tns:aggiungiFiore"/>
+
+<xs:element name="aggiungiFioreResponse" type="tns:aggiungiFioreResponse"/>
+
+<xs:element name="eliminaFiore" type="tns:eliminaFiore"/>
+
+<xs:element name="eliminaFioreResponse" type="tns:eliminaFioreResponse"/>
+
+<xs:element name="getByColore" type="tns:getByColore"/>
+
+<xs:element name="getByColoreResponse" type="tns:getByColoreResponse"/>
+
+<xs:element name="getByParassiti" type="tns:getByParassiti"/>
+
+<xs:element name="getByParassitiResponse" type="tns:getByParassitiResponse"/>
+
+<xs:element name="getByProprieta" type="tns:getByProprieta"/>
+
+<xs:element name="getByProprietaResponse" type="tns:getByProprietaResponse"/>
+
+<xs:element name="getByUso" type="tns:getByUso"/>
+
+<xs:element name="getByUsoResponse" type="tns:getByUsoResponse"/>
+
+<xs:element name="getFioreById" type="tns:getFioreById"/>
+
+<xs:element name="getFioreByIdResponse" type="tns:getFioreByIdResponse"/>
+
+<xs:element name="getFiori" type="tns:getFiori"/>
+
+<xs:element name="getFioriResponse" type="tns:getFioriResponse"/>
+
+<xs:element name="getbyCiclo" type="tns:getbyCiclo"/>
+
+<xs:element name="getbyCicloResponse" type="tns:getbyCicloResponse"/>
+
+<xs:element name="modificaFiore" type="tns:modificaFiore"/>
+
+<xs:element name="modificaFioreResponse" type="tns:modificaFioreResponse"/>
+
+<xs:complexType name="getByColore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByColoreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fiore">
+<xs:sequence>
+<xs:element name="cicloBiologico" type="xs:string" minOccurs="0"/>
+<xs:element name="colore" type="xs:string" minOccurs="0"/>
+<xs:element name="famigliaBotanica" type="xs:string" minOccurs="0"/>
+<xs:element name="giacenza" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="origine" type="xs:string" minOccurs="0"/>
+<xs:element name="parassiti" type="xs:string" minOccurs="0"/>
+<xs:element name="proprieta" type="xs:string" minOccurs="0"/>
+<xs:element name="specie" type="xs:string" minOccurs="0"/>
+<xs:element name="uso" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByUso">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByUsoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiFiore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:fiore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiFioreResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByParassiti">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByParassitiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaFiore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:fiore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaFioreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByProprieta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByProprietaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getbyCiclo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getbyCicloResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaFiore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:fiore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaFioreResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getFiori">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getFioriResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFioreById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFioreByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fiore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
