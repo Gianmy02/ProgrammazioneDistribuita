@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://viaggi/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://viaggi/">
+
+<xs:element name="aggiungiViaggio" type="tns:aggiungiViaggio"/>
+
+<xs:element name="aggiungiViaggioResponse" type="tns:aggiungiViaggioResponse"/>
+
+<xs:element name="eliminaViaggio" type="tns:eliminaViaggio"/>
+
+<xs:element name="eliminaViaggioResponse" type="tns:eliminaViaggioResponse"/>
+
+<xs:element name="getByCategoria" type="tns:getByCategoria"/>
+
+<xs:element name="getByCategoriaResponse" type="tns:getByCategoriaResponse"/>
+
+<xs:element name="getByDestinazione" type="tns:getByDestinazione"/>
+
+<xs:element name="getByDestinazioneResponse" type="tns:getByDestinazioneResponse"/>
+
+<xs:element name="getById" type="tns:getById"/>
+
+<xs:element name="getByIdResponse" type="tns:getByIdResponse"/>
+
+<xs:element name="getDisponibili" type="tns:getDisponibili"/>
+
+<xs:element name="getDisponibiliResponse" type="tns:getDisponibiliResponse"/>
+
+<xs:element name="getViaggi" type="tns:getViaggi"/>
+
+<xs:element name="getViaggiPrezzoInf" type="tns:getViaggiPrezzoInf"/>
+
+<xs:element name="getViaggiPrezzoInfResponse" type="tns:getViaggiPrezzoInfResponse"/>
+
+<xs:element name="getViaggiResponse" type="tns:getViaggiResponse"/>
+
+<xs:element name="modificaViaggio" type="tns:modificaViaggio"/>
+
+<xs:element name="modificaViaggioResponse" type="tns:modificaViaggioResponse"/>
+
+<xs:complexType name="getByCategoria">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByCategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viaggio">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="destinazione" type="xs:string" minOccurs="0"/>
+<xs:element name="disponibilita" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="prezzo" type="xs:int"/>
+<xs:element name="sconto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByDestinazione">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByDestinazioneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getViaggiPrezzoInf">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getViaggiPrezzoInfResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDisponibili">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDisponibiliResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaViaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:viaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaViaggioResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getViaggi">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getViaggiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaViaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:viaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaViaggioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:viaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiViaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:viaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiViaggioResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
