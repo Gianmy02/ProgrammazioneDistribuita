@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://partita/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://partita/">
+
+<xs:element name="aggiungiPartita" type="tns:aggiungiPartita"/>
+
+<xs:element name="aggiungiPartitaResponse" type="tns:aggiungiPartitaResponse"/>
+
+<xs:element name="cercaPerId" type="tns:cercaPerId"/>
+
+<xs:element name="cercaPerIdResponse" type="tns:cercaPerIdResponse"/>
+
+<xs:element name="eliminaPartita" type="tns:eliminaPartita"/>
+
+<xs:element name="eliminaPartitaResponse" type="tns:eliminaPartitaResponse"/>
+
+<xs:element name="getByTipo" type="tns:getByTipo"/>
+
+<xs:element name="getByTipoResponse" type="tns:getByTipoResponse"/>
+
+<xs:element name="getGiocate" type="tns:getGiocate"/>
+
+<xs:element name="getGiocateResponse" type="tns:getGiocateResponse"/>
+
+<xs:element name="getPartite" type="tns:getPartite"/>
+
+<xs:element name="getPartiteByAmmonizioni" type="tns:getPartiteByAmmonizioni"/>
+
+<xs:element name="getPartiteByAmmonizioniResponse" type="tns:getPartiteByAmmonizioniResponse"/>
+
+<xs:element name="getPartiteByEspulsioni" type="tns:getPartiteByEspulsioni"/>
+
+<xs:element name="getPartiteByEspulsioniResponse" type="tns:getPartiteByEspulsioniResponse"/>
+
+<xs:element name="getPartiteGoalMaggiori" type="tns:getPartiteGoalMaggiori"/>
+
+<xs:element name="getPartiteGoalMaggioriResponse" type="tns:getPartiteGoalMaggioriResponse"/>
+
+<xs:element name="getPartiteResponse" type="tns:getPartiteResponse"/>
+
+<xs:element name="modificaPartita" type="tns:modificaPartita"/>
+
+<xs:element name="modificaPartitaResponse" type="tns:modificaPartitaResponse"/>
+
+<xs:complexType name="getPartiteGoalMaggiori">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartiteGoalMaggioriResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="partita">
+<xs:sequence>
+<xs:element name="ammonizioni" type="xs:int"/>
+<xs:element name="espulsioni" type="xs:int"/>
+<xs:element name="giocata" type="xs:string" minOccurs="0"/>
+<xs:element name="goalCasa" type="xs:int"/>
+<xs:element name="goalOspite" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="sqCasa" type="xs:string" minOccurs="0"/>
+<xs:element name="sqOspite" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiPartita">
+<xs:sequence>
+<xs:element name="arg0" type="tns:partita" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiPartitaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaPartita">
+<xs:sequence>
+<xs:element name="arg0" type="tns:partita" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaPartitaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getGiocate">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getGiocateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaPartita">
+<xs:sequence>
+<xs:element name="arg0" type="tns:partita" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaPartitaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartite">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getPartiteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartiteByEspulsioni">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartiteByEspulsioniResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartiteByAmmonizioni">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartiteByAmmonizioniResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
