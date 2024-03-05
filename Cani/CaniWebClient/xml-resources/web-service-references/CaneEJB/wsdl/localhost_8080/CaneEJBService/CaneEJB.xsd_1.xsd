@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://cani/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://cani/">
+
+<xs:element name="adotta" type="tns:adotta"/>
+
+<xs:element name="adottaResponse" type="tns:adottaResponse"/>
+
+<xs:element name="aggiungiCane" type="tns:aggiungiCane"/>
+
+<xs:element name="aggiungiCaneResponse" type="tns:aggiungiCaneResponse"/>
+
+<xs:element name="cane" type="tns:cane"/>
+
+<xs:element name="eliminaCane" type="tns:eliminaCane"/>
+
+<xs:element name="eliminaCaneResponse" type="tns:eliminaCaneResponse"/>
+
+<xs:element name="getByEta" type="tns:getByEta"/>
+
+<xs:element name="getByEtaResponse" type="tns:getByEtaResponse"/>
+
+<xs:element name="getByNome" type="tns:getByNome"/>
+
+<xs:element name="getByNomeResponse" type="tns:getByNomeResponse"/>
+
+<xs:element name="getByRazza" type="tns:getByRazza"/>
+
+<xs:element name="getByRazzaResponse" type="tns:getByRazzaResponse"/>
+
+<xs:element name="getByStatus" type="tns:getByStatus"/>
+
+<xs:element name="getByStatusResponse" type="tns:getByStatusResponse"/>
+
+<xs:element name="getByTaglia" type="tns:getByTaglia"/>
+
+<xs:element name="getByTagliaPiccola" type="tns:getByTagliaPiccola"/>
+
+<xs:element name="getByTagliaPiccolaResponse" type="tns:getByTagliaPiccolaResponse"/>
+
+<xs:element name="getByTagliaResponse" type="tns:getByTagliaResponse"/>
+
+<xs:element name="getCaneById" type="tns:getCaneById"/>
+
+<xs:element name="getCaneByIdResponse" type="tns:getCaneByIdResponse"/>
+
+<xs:element name="getCani" type="tns:getCani"/>
+
+<xs:element name="getCaniResponse" type="tns:getCaniResponse"/>
+
+<xs:element name="modificaCane" type="tns:modificaCane"/>
+
+<xs:element name="modificaCaneResponse" type="tns:modificaCaneResponse"/>
+
+<xs:complexType name="getByNome">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByNomeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cane">
+<xs:sequence>
+<xs:element name="fasciaEta" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="microchip" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="razza" type="xs:string" minOccurs="0"/>
+<xs:element name="sesso" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:boolean"/>
+<xs:element name="taglia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaCane">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaCaneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCane">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCaneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCaneById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCaneByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCani">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCaniResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTagliaPiccola">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTagliaPiccolaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByRazza">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByRazzaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adotta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adottaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByEta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByEtaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByStatus">
+<xs:sequence>
+<xs:element name="arg0" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTaglia">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTagliaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiCane">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiCaneResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
