@@ -9,6 +9,8 @@
             <name>VentilatoreBean</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <included-library dirs="200">reference.VentilatoreClient.jar</included-library>
+            <included-library dirs="200">libs.JAVADB_DRIVER_LABEL.classpath</included-library>
+            <included-library dirs="200">libs.GlassFishClient.classpath</included-library>
             <source-roots>
                 <root id="src.dir" name="Source Packages"/>
             </source-roots>

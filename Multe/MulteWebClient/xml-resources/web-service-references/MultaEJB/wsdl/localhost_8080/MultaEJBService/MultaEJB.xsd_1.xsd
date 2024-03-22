@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://multa/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://multa/">
+
+<xs:element name="aggiungiMulta" type="tns:aggiungiMulta"/>
+
+<xs:element name="aggiungiMultaResponse" type="tns:aggiungiMultaResponse"/>
+
+<xs:element name="cercaMulta" type="tns:cercaMulta"/>
+
+<xs:element name="cercaMultaResponse" type="tns:cercaMultaResponse"/>
+
+<xs:element name="eliminaMulta" type="tns:eliminaMulta"/>
+
+<xs:element name="eliminaMultaResponse" type="tns:eliminaMultaResponse"/>
+
+<xs:element name="getByNomecognome" type="tns:getByNomecognome"/>
+
+<xs:element name="getByNomecognomeResponse" type="tns:getByNomecognomeResponse"/>
+
+<xs:element name="getContestabili" type="tns:getContestabili"/>
+
+<xs:element name="getContestabiliResponse" type="tns:getContestabiliResponse"/>
+
+<xs:element name="getMulte" type="tns:getMulte"/>
+
+<xs:element name="getMulteResponse" type="tns:getMulteResponse"/>
+
+<xs:element name="getNonPagate" type="tns:getNonPagate"/>
+
+<xs:element name="getNonPagateResponse" type="tns:getNonPagateResponse"/>
+
+<xs:element name="modificaMulta" type="tns:modificaMulta"/>
+
+<xs:element name="modificaMultaResponse" type="tns:modificaMultaResponse"/>
+
+<xs:complexType name="getMulte">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getMulteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multa">
+<xs:sequence>
+<xs:element name="caricamento" type="tns:localDate" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="motivo" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeCognome" type="xs:string" minOccurs="0"/>
+<xs:element name="notifica" type="tns:localDate" minOccurs="0"/>
+<xs:element name="somma" type="xs:int"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localDate" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByNomecognome">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByNomecognomeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContestabili">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getContestabiliResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaMulta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaMultaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNonPagate">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNonPagateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiMulta">
+<xs:sequence>
+<xs:element name="arg0" type="tns:multa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiMultaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="modificaMulta">
+<xs:sequence>
+<xs:element name="arg0" type="tns:multa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaMultaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:multa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaMulta">
+<xs:sequence>
+<xs:element name="arg0" type="tns:multa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaMultaResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>

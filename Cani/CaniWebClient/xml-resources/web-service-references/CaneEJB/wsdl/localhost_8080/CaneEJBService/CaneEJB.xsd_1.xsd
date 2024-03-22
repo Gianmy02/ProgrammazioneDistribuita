@@ -50,15 +50,9 @@
 
 <xs:element name="modificaCaneResponse" type="tns:modificaCaneResponse"/>
 
-<xs:complexType name="getByNome">
+<xs:complexType name="modificaCane">
 <xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getByNomeResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -75,15 +69,21 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="modificaCane">
-<xs:sequence>
-<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="modificaCaneResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByNome">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByNomeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -95,6 +95,18 @@
 
 <xs:complexType name="eliminaCaneResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByTagliaPiccola">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTagliaPiccolaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="getCaneById">
@@ -119,16 +131,14 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getByTagliaPiccola">
+<xs:complexType name="adotta">
 <xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg0" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getByTagliaPiccolaResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
+<xs:complexType name="adottaResponse">
+<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="getByRazza">
@@ -141,16 +151,6 @@
 <xs:sequence>
 <xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="adotta">
-<xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="adottaResponse">
-<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="getByEta">

@@ -11,7 +11,7 @@ import javax.inject.Inject;
 @Singleton
 @DataSourceDefinition(
     className = "org.apache.derby.jdbc.EmbeddedDataSource",
-        name = "java:global/jdbc/EsameDS",
+        name = "jdbc/EsameDS",
         user = "app",
         password = "app",
         databaseName = "EsameDB",

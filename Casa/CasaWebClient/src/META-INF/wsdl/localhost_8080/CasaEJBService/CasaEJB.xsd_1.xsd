@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://casa/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://casa/">
+
+<xs:element name="aggiungiCasa" type="tns:aggiungiCasa"/>
+
+<xs:element name="aggiungiCasaResponse" type="tns:aggiungiCasaResponse"/>
+
+<xs:element name="casa" type="tns:casa"/>
+
+<xs:element name="cercaPerId" type="tns:cercaPerId"/>
+
+<xs:element name="cercaPerIdResponse" type="tns:cercaPerIdResponse"/>
+
+<xs:element name="eliminaCasa" type="tns:eliminaCasa"/>
+
+<xs:element name="eliminaCasaResponse" type="tns:eliminaCasaResponse"/>
+
+<xs:element name="getByCap" type="tns:getByCap"/>
+
+<xs:element name="getByCapResponse" type="tns:getByCapResponse"/>
+
+<xs:element name="getByPrezzoInferiore" type="tns:getByPrezzoInferiore"/>
+
+<xs:element name="getByPrezzoInferioreResponse" type="tns:getByPrezzoInferioreResponse"/>
+
+<xs:element name="getByPrezzoZona" type="tns:getByPrezzoZona"/>
+
+<xs:element name="getByPrezzoZonaResponse" type="tns:getByPrezzoZonaResponse"/>
+
+<xs:element name="getByTipo" type="tns:getByTipo"/>
+
+<xs:element name="getByTipoResponse" type="tns:getByTipoResponse"/>
+
+<xs:element name="getCase" type="tns:getCase"/>
+
+<xs:element name="getCaseResponse" type="tns:getCaseResponse"/>
+
+<xs:element name="getLibera" type="tns:getLibera"/>
+
+<xs:element name="getLiberaResponse" type="tns:getLiberaResponse"/>
+
+<xs:element name="modificaCasa" type="tns:modificaCasa"/>
+
+<xs:element name="modificaCasaResponse" type="tns:modificaCasaResponse"/>
+
+<xs:complexType name="getCase">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCaseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="casa">
+<xs:sequence>
+<xs:element name="cap" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="indirizzo" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzo" type="xs:float"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCasaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByCap">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByCapResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByPrezzoZona">
+<xs:sequence>
+<xs:element name="arg0" type="xs:float"/>
+<xs:element name="arg1" type="xs:float"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByPrezzoZonaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaCasaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiCasaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getLibera">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getLiberaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByPrezzoInferiore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByPrezzoInferioreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

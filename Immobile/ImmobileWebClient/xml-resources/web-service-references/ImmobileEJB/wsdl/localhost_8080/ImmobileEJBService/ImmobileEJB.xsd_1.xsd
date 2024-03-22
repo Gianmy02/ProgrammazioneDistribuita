@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://immobile/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://immobile/">
+
+<xs:element name="aggiungiImmobile" type="tns:aggiungiImmobile"/>
+
+<xs:element name="aggiungiImmobileResponse" type="tns:aggiungiImmobileResponse"/>
+
+<xs:element name="eliminaImmobile" type="tns:eliminaImmobile"/>
+
+<xs:element name="eliminaImmobileResponse" type="tns:eliminaImmobileResponse"/>
+
+<xs:element name="getById" type="tns:getById"/>
+
+<xs:element name="getByIdResponse" type="tns:getByIdResponse"/>
+
+<xs:element name="getByIndirizzo" type="tns:getByIndirizzo"/>
+
+<xs:element name="getByIndirizzoResponse" type="tns:getByIndirizzoResponse"/>
+
+<xs:element name="getByStato" type="tns:getByStato"/>
+
+<xs:element name="getByStatoResponse" type="tns:getByStatoResponse"/>
+
+<xs:element name="getImmobili" type="tns:getImmobili"/>
+
+<xs:element name="getImmobiliResponse" type="tns:getImmobiliResponse"/>
+
+<xs:element name="getVenditaDueMesi" type="tns:getVenditaDueMesi"/>
+
+<xs:element name="getVenditaDueMesiResponse" type="tns:getVenditaDueMesiResponse"/>
+
+<xs:element name="immobile" type="tns:immobile"/>
+
+<xs:element name="modificaImmobile" type="tns:modificaImmobile"/>
+
+<xs:element name="modificaImmobileResponse" type="tns:modificaImmobileResponse"/>
+
+<xs:complexType name="aggiungiImmobile">
+<xs:sequence>
+<xs:element name="arg0" type="tns:immobile" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="immobile">
+<xs:sequence>
+<xs:element name="caricamento" type="tns:localDate" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="indirizzo" type="xs:string" minOccurs="0"/>
+<xs:element name="modifica" type="tns:localDate" minOccurs="0"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+<xs:element name="valore" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localDate" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="aggiungiImmobileResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getByStato">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByStatoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaImmobile">
+<xs:sequence>
+<xs:element name="arg0" type="tns:immobile" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaImmobileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVenditaDueMesi">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getVenditaDueMesiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByIndirizzo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByIndirizzoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaImmobile">
+<xs:sequence>
+<xs:element name="arg0" type="tns:immobile" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaImmobileResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getImmobili">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getImmobiliResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:immobile" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

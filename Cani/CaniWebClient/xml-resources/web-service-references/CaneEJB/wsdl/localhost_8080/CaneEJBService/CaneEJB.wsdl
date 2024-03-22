@@ -4,23 +4,11 @@
 <xsd:import namespace="http://cani/" schemaLocation="http://localhost:8080/CaneEJBService/CaneEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getCaneById">
-<part name="parameters" element="tns:getCaneById"/>
+<message name="getByTagliaPiccola">
+<part name="parameters" element="tns:getByTagliaPiccola"/>
 </message>
-<message name="getCaneByIdResponse">
-<part name="parameters" element="tns:getCaneByIdResponse"/>
-</message>
-<message name="getByNome">
-<part name="parameters" element="tns:getByNome"/>
-</message>
-<message name="getByNomeResponse">
-<part name="parameters" element="tns:getByNomeResponse"/>
-</message>
-<message name="modificaCane">
-<part name="parameters" element="tns:modificaCane"/>
-</message>
-<message name="modificaCaneResponse">
-<part name="parameters" element="tns:modificaCaneResponse"/>
+<message name="getByTagliaPiccolaResponse">
+<part name="parameters" element="tns:getByTagliaPiccolaResponse"/>
 </message>
 <message name="getByStatus">
 <part name="parameters" element="tns:getByStatus"/>
@@ -28,17 +16,41 @@
 <message name="getByStatusResponse">
 <part name="parameters" element="tns:getByStatusResponse"/>
 </message>
-<message name="aggiungiCane">
-<part name="parameters" element="tns:aggiungiCane"/>
+<message name="adotta">
+<part name="parameters" element="tns:adotta"/>
 </message>
-<message name="aggiungiCaneResponse">
-<part name="parameters" element="tns:aggiungiCaneResponse"/>
+<message name="adottaResponse">
+<part name="parameters" element="tns:adottaResponse"/>
 </message>
 <message name="eliminaCane">
 <part name="parameters" element="tns:eliminaCane"/>
 </message>
 <message name="eliminaCaneResponse">
 <part name="parameters" element="tns:eliminaCaneResponse"/>
+</message>
+<message name="getByEta">
+<part name="parameters" element="tns:getByEta"/>
+</message>
+<message name="getByEtaResponse">
+<part name="parameters" element="tns:getByEtaResponse"/>
+</message>
+<message name="getCaneById">
+<part name="parameters" element="tns:getCaneById"/>
+</message>
+<message name="getCaneByIdResponse">
+<part name="parameters" element="tns:getCaneByIdResponse"/>
+</message>
+<message name="aggiungiCane">
+<part name="parameters" element="tns:aggiungiCane"/>
+</message>
+<message name="aggiungiCaneResponse">
+<part name="parameters" element="tns:aggiungiCaneResponse"/>
+</message>
+<message name="modificaCane">
+<part name="parameters" element="tns:modificaCane"/>
+</message>
+<message name="modificaCaneResponse">
+<part name="parameters" element="tns:modificaCaneResponse"/>
 </message>
 <message name="getCani">
 <part name="parameters" element="tns:getCani"/>
@@ -52,54 +64,50 @@
 <message name="getByRazzaResponse">
 <part name="parameters" element="tns:getByRazzaResponse"/>
 </message>
+<message name="getByNome">
+<part name="parameters" element="tns:getByNome"/>
+</message>
+<message name="getByNomeResponse">
+<part name="parameters" element="tns:getByNomeResponse"/>
+</message>
 <message name="getByTaglia">
 <part name="parameters" element="tns:getByTaglia"/>
 </message>
 <message name="getByTagliaResponse">
 <part name="parameters" element="tns:getByTagliaResponse"/>
 </message>
-<message name="getByEta">
-<part name="parameters" element="tns:getByEta"/>
-</message>
-<message name="getByEtaResponse">
-<part name="parameters" element="tns:getByEtaResponse"/>
-</message>
-<message name="adotta">
-<part name="parameters" element="tns:adotta"/>
-</message>
-<message name="adottaResponse">
-<part name="parameters" element="tns:adottaResponse"/>
-</message>
-<message name="getByTagliaPiccola">
-<part name="parameters" element="tns:getByTagliaPiccola"/>
-</message>
-<message name="getByTagliaPiccolaResponse">
-<part name="parameters" element="tns:getByTagliaPiccolaResponse"/>
-</message>
 <portType name="CaneEJB">
-<operation name="getCaneById">
-<input wsam:Action="http://cani/CaneEJB/getCaneByIdRequest" message="tns:getCaneById"/>
-<output wsam:Action="http://cani/CaneEJB/getCaneByIdResponse" message="tns:getCaneByIdResponse"/>
-</operation>
-<operation name="getByNome">
-<input wsam:Action="http://cani/CaneEJB/getByNomeRequest" message="tns:getByNome"/>
-<output wsam:Action="http://cani/CaneEJB/getByNomeResponse" message="tns:getByNomeResponse"/>
-</operation>
-<operation name="modificaCane">
-<input wsam:Action="http://cani/CaneEJB/modificaCaneRequest" message="tns:modificaCane"/>
-<output wsam:Action="http://cani/CaneEJB/modificaCaneResponse" message="tns:modificaCaneResponse"/>
+<operation name="getByTagliaPiccola">
+<input wsam:Action="http://cani/CaneEJB/getByTagliaPiccolaRequest" message="tns:getByTagliaPiccola"/>
+<output wsam:Action="http://cani/CaneEJB/getByTagliaPiccolaResponse" message="tns:getByTagliaPiccolaResponse"/>
 </operation>
 <operation name="getByStatus">
 <input wsam:Action="http://cani/CaneEJB/getByStatusRequest" message="tns:getByStatus"/>
 <output wsam:Action="http://cani/CaneEJB/getByStatusResponse" message="tns:getByStatusResponse"/>
 </operation>
-<operation name="aggiungiCane">
-<input wsam:Action="http://cani/CaneEJB/aggiungiCaneRequest" message="tns:aggiungiCane"/>
-<output wsam:Action="http://cani/CaneEJB/aggiungiCaneResponse" message="tns:aggiungiCaneResponse"/>
+<operation name="adotta">
+<input wsam:Action="http://cani/CaneEJB/adottaRequest" message="tns:adotta"/>
+<output wsam:Action="http://cani/CaneEJB/adottaResponse" message="tns:adottaResponse"/>
 </operation>
 <operation name="eliminaCane">
 <input wsam:Action="http://cani/CaneEJB/eliminaCaneRequest" message="tns:eliminaCane"/>
 <output wsam:Action="http://cani/CaneEJB/eliminaCaneResponse" message="tns:eliminaCaneResponse"/>
+</operation>
+<operation name="getByEta">
+<input wsam:Action="http://cani/CaneEJB/getByEtaRequest" message="tns:getByEta"/>
+<output wsam:Action="http://cani/CaneEJB/getByEtaResponse" message="tns:getByEtaResponse"/>
+</operation>
+<operation name="getCaneById">
+<input wsam:Action="http://cani/CaneEJB/getCaneByIdRequest" message="tns:getCaneById"/>
+<output wsam:Action="http://cani/CaneEJB/getCaneByIdResponse" message="tns:getCaneByIdResponse"/>
+</operation>
+<operation name="aggiungiCane">
+<input wsam:Action="http://cani/CaneEJB/aggiungiCaneRequest" message="tns:aggiungiCane"/>
+<output wsam:Action="http://cani/CaneEJB/aggiungiCaneResponse" message="tns:aggiungiCaneResponse"/>
+</operation>
+<operation name="modificaCane">
+<input wsam:Action="http://cani/CaneEJB/modificaCaneRequest" message="tns:modificaCane"/>
+<output wsam:Action="http://cani/CaneEJB/modificaCaneResponse" message="tns:modificaCaneResponse"/>
 </operation>
 <operation name="getCani">
 <input wsam:Action="http://cani/CaneEJB/getCaniRequest" message="tns:getCani"/>
@@ -109,44 +117,18 @@
 <input wsam:Action="http://cani/CaneEJB/getByRazzaRequest" message="tns:getByRazza"/>
 <output wsam:Action="http://cani/CaneEJB/getByRazzaResponse" message="tns:getByRazzaResponse"/>
 </operation>
+<operation name="getByNome">
+<input wsam:Action="http://cani/CaneEJB/getByNomeRequest" message="tns:getByNome"/>
+<output wsam:Action="http://cani/CaneEJB/getByNomeResponse" message="tns:getByNomeResponse"/>
+</operation>
 <operation name="getByTaglia">
 <input wsam:Action="http://cani/CaneEJB/getByTagliaRequest" message="tns:getByTaglia"/>
 <output wsam:Action="http://cani/CaneEJB/getByTagliaResponse" message="tns:getByTagliaResponse"/>
 </operation>
-<operation name="getByEta">
-<input wsam:Action="http://cani/CaneEJB/getByEtaRequest" message="tns:getByEta"/>
-<output wsam:Action="http://cani/CaneEJB/getByEtaResponse" message="tns:getByEtaResponse"/>
-</operation>
-<operation name="adotta">
-<input wsam:Action="http://cani/CaneEJB/adottaRequest" message="tns:adotta"/>
-<output wsam:Action="http://cani/CaneEJB/adottaResponse" message="tns:adottaResponse"/>
-</operation>
-<operation name="getByTagliaPiccola">
-<input wsam:Action="http://cani/CaneEJB/getByTagliaPiccolaRequest" message="tns:getByTagliaPiccola"/>
-<output wsam:Action="http://cani/CaneEJB/getByTagliaPiccolaResponse" message="tns:getByTagliaPiccolaResponse"/>
-</operation>
 </portType>
 <binding name="CaneEJBPortBinding" type="tns:CaneEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="getCaneById">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getByNome">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificaCane">
+<operation name="getByTagliaPiccola">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -164,7 +146,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="aggiungiCane">
+<operation name="adotta">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -174,6 +156,42 @@
 </output>
 </operation>
 <operation name="eliminaCane">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getByEta">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getCaneById">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="aggiungiCane">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificaCane">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -200,34 +218,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="getByNome">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="getByTaglia">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getByEta">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="adotta">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getByTagliaPiccola">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -8,9 +8,13 @@ package caniwebclient;
 import cani.Cane;
 import java.util.List;
 
+/**
+ *
+ * @author amministratore
+ */
 public class CaniWebClient {
 
-    public static void main(String[] args) {
+       public static void main(String[] args) {
         System.out.println("Stampa di tutti i cani gia adottati");
         List<Cane> cani = getAdottati(true);
         for(Cane c : cani)
